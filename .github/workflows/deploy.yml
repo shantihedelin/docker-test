@@ -26,9 +26,9 @@ jobs:
       - name: Run Docker on EC2
         uses: appleboy/ssh-action@master
         with:
-         host: ${{ secrets.HOST }}
+          host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           script: |
-          cd /home/ubuntu/docker-test
-          sudo docker-compose down
-          sudo docker-compose up --build -d
+            cd /home/ubuntu/docker-test
+            sudo docker-compose down
+            sudo docker-compose up --build -d
